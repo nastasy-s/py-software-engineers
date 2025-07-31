@@ -26,3 +26,10 @@ numbers.append(5)
 
 2. `skills` variable should be an attribute of the instance not class.
 3. Make sure not to override a method, if you do not add additional logic inside (that would be a bad practice).
+4. Avoid overriding `__init__()` if you're only calling `super().__init__()` with the same arguments.
+
+Bad example:
+```python
+def __init__(self, name):
+    super().__init__(name)
+```
